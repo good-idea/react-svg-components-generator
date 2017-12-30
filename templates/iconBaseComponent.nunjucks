@@ -2,14 +2,15 @@ import React, { PropTypes } from 'react';
 
 const IconBase = ({ children, width, height, style = {}, ...props }) => (
     <svg
-        children={children}
         fill='currentColor'
         preserveAspectRatio='xMidYMid meet'
         height={height}
         width={width}
         style={style}
         {...props}
-    />
+    >
+        {children}
+    </svg>
 );
 
 IconBase.propTypes = {
