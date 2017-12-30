@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const IconBase = ({ children, width, height, style = {}, ...props }) => (
+const IconBase = ({ children, width, height, style, ...props }) => (
     <svg
         fill='currentColor'
         preserveAspectRatio='xMidYMid meet'
@@ -17,7 +17,7 @@ IconBase.propTypes = {
     children: PropTypes.node.isRequired,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    style: PropTypes.object,
+    style: PropTypes.shape({}),
 };
 
 IconBase.defaultProps = {
